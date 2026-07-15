@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* ── Design system Brilho Real ─────────────────────────────
+   Paleta: preto profundo, branco, dourado suave, cinza escuro.
+   Tipografia: Playfair Display (display) + Inter (texto).     */
+@theme inline {
+  --color-ink: #0d0d0d;
+  --color-graphite: #1e1e1e;
+  --color-gold: #c8a96b;
+  --color-gold-soft: #dbc59a;
+  --color-paper: #ffffff;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem; /* compensa a navbar fixa nas âncoras */
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(200, 169, 107, 0.3);
+}
