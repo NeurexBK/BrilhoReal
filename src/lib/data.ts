@@ -123,7 +123,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: "foto",
     image: "/images/galeria/galeria-carro.jpg",
   },
-  { label: "Iate 42 pés", location: "Vilamoura", type: "foto" },
+  {
+    label: "Interior de iate",
+    location: "Estofos marítimos",
+    type: "foto",
+    image: "/images/galeria/galeria-iate.jpg",
+  },
   { label: "Tapete de lã", location: "Sintra", type: "foto" },
   {
     label: "Estofos renovados",

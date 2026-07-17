@@ -38,6 +38,16 @@ centralizados em **`src/lib/data.ts`**.
 > Nota: o e-mail `geral@brilhoreal.pt` é um placeholder — confirmar o endereço
 > real em `src/lib/data.ts`.
 
+### Imagens de arquivo
+
+O par antes/depois **marítimo** e a foto de galeria **interior de iate** usam
+fotografias do [Pexels](https://www.pexels.com) (licença gratuita para uso
+comercial, sem atribuição obrigatória): fotos
+[17859032](https://www.pexels.com/photo/17859032/) e
+[8356428](https://www.pexels.com/photo/8356428/). O "antes" marítimo tem
+envelhecimento aplicado por edição — substituir por fotografias reais de
+serviços quando existirem.
+
 ## Preparação para o futuro
 
 A secção **Futuro** (Cursos · Formação · Área premium · Conteúdo exclusivo)

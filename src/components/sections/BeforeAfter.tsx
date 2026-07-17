@@ -20,14 +20,16 @@ import { fadeUp, stagger, VIEWPORT } from "@/lib/motion";
 
 type Variant = "sofas" | "carro" | "maritimo" | "tapetes";
 
-const ITEMS: { id: Variant; label: string }[] = [
-  { id: "sofas", label: "Sofás" },
-  { id: "carro", label: "Bancos de carro" },
-  { id: "maritimo", label: "Estofos marítimos" },
-  { id: "tapetes", label: "Tapetes" },
+const ITEMS: { id: Variant; label: string; note: string }[] = [
+  { id: "sofas", label: "Sofás", note: "Higienização profunda · Resultados reais" },
+  { id: "carro", label: "Bancos de carro", note: "Higienização profunda · Resultados reais" },
+  { id: "maritimo", label: "Estofos marítimos", note: "Imagem ilustrativa do serviço marítimo" },
+  { id: "tapetes", label: "Tapetes", note: "Higienização profunda · Antes e depois" },
 ];
 
-/* Pares de fotografias reais (antes/depois) por variante. */
+/* Pares de fotografias (antes/depois) por variante.
+   maritimo: fotografia de arquivo (Pexels) com envelhecimento
+   editado no "antes" — substituir por fotos reais quando existirem. */
 const MEDIA: Partial<Record<Variant, { antes: string; depois: string }>> = {
   sofas: {
     antes: "/images/resultados/sofas-antes.jpg",
@@ -36,6 +38,10 @@ const MEDIA: Partial<Record<Variant, { antes: string; depois: string }>> = {
   carro: {
     antes: "/images/resultados/carro-antes.jpg",
     depois: "/images/resultados/carro-depois.jpg",
+  },
+  maritimo: {
+    antes: "/images/resultados/maritimo-antes.jpg",
+    depois: "/images/resultados/maritimo-depois.jpg",
   },
 };
 
@@ -253,7 +259,7 @@ export default function BeforeAfter() {
           </div>
 
           <p className="mt-6 text-center text-xs tracking-[0.2em] text-white/30 uppercase">
-            Higienização profunda · Resultados reais
+            {ITEMS.find((item) => item.id === active)?.note}
           </p>
         </Reveal>
       </Container>
