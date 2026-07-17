@@ -20,11 +20,11 @@ import { fadeUp, stagger, VIEWPORT } from "@/lib/motion";
 
 type Variant = "sofas" | "carro" | "maritimo" | "tapetes";
 
-const ITEMS: { id: Variant; label: string; note: string }[] = [
-  { id: "sofas", label: "Sofás", note: "Higienização profunda · Resultados reais" },
-  { id: "carro", label: "Bancos de carro", note: "Higienização profunda · Resultados reais" },
-  { id: "maritimo", label: "Estofos marítimos", note: "Imagem ilustrativa do serviço marítimo" },
-  { id: "tapetes", label: "Tapetes", note: "Imagem ilustrativa do serviço de tapetes" },
+const ITEMS: { id: Variant; label: string }[] = [
+  { id: "sofas", label: "Sofás" },
+  { id: "carro", label: "Bancos de carro" },
+  { id: "maritimo", label: "Estofos marítimos" },
+  { id: "tapetes", label: "Tapetes" },
 ];
 
 /* Pares de fotografias (antes/depois) por variante.
@@ -263,7 +263,7 @@ export default function BeforeAfter() {
           </div>
 
           <p className="mt-6 text-center text-xs tracking-[0.2em] text-white/30 uppercase">
-            {ITEMS.find((item) => item.id === active)?.note}
+            Higienização profunda · Resultados reais
           </p>
         </Reveal>
       </Container>
