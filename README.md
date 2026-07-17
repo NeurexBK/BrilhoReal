@@ -40,13 +40,20 @@ centralizados em **`src/lib/data.ts`**.
 
 ### Imagens de arquivo
 
-O par antes/depois **marítimo** e a foto de galeria **interior de iate** usam
-fotografias do [Pexels](https://www.pexels.com) (licença gratuita para uso
-comercial, sem atribuição obrigatória): fotos
-[17859032](https://www.pexels.com/photo/17859032/) e
-[8356428](https://www.pexels.com/photo/8356428/). O "antes" marítimo tem
-envelhecimento aplicado por edição — substituir por fotografias reais de
-serviços quando existirem.
+Algumas imagens usam fotografias do [Pexels](https://www.pexels.com)
+(licença gratuita para uso comercial, sem atribuição obrigatória):
+
+- Antes/depois **marítimo**: [17859032](https://www.pexels.com/photo/17859032/)
+- Antes/depois **tapetes**: [28379848](https://www.pexels.com/photo/28379848/)
+- Galeria **interior de iate**: [8356428](https://www.pexels.com/photo/8356428/)
+- Galeria **lancha**: [34405154](https://www.pexels.com/photo/34405154/)
+- Card de serviço **marítimo**: [8356420](https://www.pexels.com/photo/8356420/)
+- Poster do hero: [6510311](https://www.pexels.com/photo/6510311/)
+
+Os "antes" marítimo e de tapetes têm envelhecimento aplicado por edição
+(a legenda do comparador assinala "imagem ilustrativa") — substituir por
+fotografias reais de serviços quando existirem. As restantes imagens
+(sofás, automóvel, galeria, sobre nós) são fotografias reais da Brilho Real.
 
 ## Preparação para o futuro
 

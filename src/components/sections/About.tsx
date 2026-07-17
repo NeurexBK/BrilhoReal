@@ -1,8 +1,7 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import MediaPlaceholder from "@/components/ui/MediaPlaceholder";
 import Reveal from "@/components/ui/Reveal";
-import { IconSparkles } from "@/components/icons";
 
 const PILLARS = [
   {
@@ -51,12 +50,15 @@ export default function About() {
             </div>
           </div>
 
-          {/* Fotografia da equipa — substituir por imagem real */}
+          {/* Trabalho em ação — higienização profissional */}
           <Reveal delay={0.2} className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl">
-              <MediaPlaceholder
-                icon={<IconSparkles className="h-full w-full" />}
-                label="A nossa equipa"
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
+              <Image
+                src="/images/sobre-acao.jpg"
+                alt="Higienização profissional Brilho Real em ação"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -left-4 rounded-2xl border border-ink/8 bg-paper px-7 py-5 shadow-[0_24px_60px_-30px_rgba(13,13,13,0.35)] md:-left-8">

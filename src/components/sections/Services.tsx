@@ -1,25 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import MediaPlaceholder from "@/components/ui/MediaPlaceholder";
 import {
   IconArrowRight,
   IconBuilding,
-  IconCar,
   IconCheck,
-  IconSofa,
-  IconYacht,
 } from "@/components/icons";
 import { CONTACT, SERVICE_CATEGORIES } from "@/lib/data";
 import { fadeUp, stagger, VIEWPORT } from "@/lib/motion";
-
-const CATEGORY_ICONS = {
-  residencial: IconSofa,
-  automovel: IconCar,
-  maritimo: IconYacht,
-} as const;
 
 export default function Services() {
   return (
@@ -39,7 +30,6 @@ export default function Services() {
           className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3"
         >
           {SERVICE_CATEGORIES.map((category) => {
-            const Icon = CATEGORY_ICONS[category.id];
             return (
               <motion.a
                 key={category.id}
@@ -49,12 +39,15 @@ export default function Services() {
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden rounded-3xl bg-graphite text-paper ring-1 ring-transparent transition-all duration-500 hover:ring-gold/40"
               >
-                {/* Imagem grande — substituir MediaPlaceholder por foto real */}
+                {/* Imagem grande do serviço */}
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
-                    <MediaPlaceholder
-                      icon={<Icon className="h-full w-full" />}
-                      label={category.title}
+                  <div className="relative h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
+                    <Image
+                      src={category.image}
+                      alt={`Serviço ${category.title.toLowerCase()} — Brilho Real`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
                     />
                   </div>
                   <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink via-ink/60 to-transparent" />

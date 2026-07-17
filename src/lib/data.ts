@@ -39,7 +39,7 @@ export const SERVICE_CATEGORIES = [
     description:
       "Sofás, colchões e tapetes renovados com higienização profunda.",
     items: ["Sofás", "Colchões", "Tapetes"],
-    /* Substituir por fotografia real: public/images/servicos/residencial.jpg */
+    image: "/images/servicos/servico-residencial.jpg",
   },
   {
     id: "automovel",
@@ -47,7 +47,7 @@ export const SERVICE_CATEGORIES = [
     description:
       "Bancos, interior completo e higienização com acabamento de detalhe.",
     items: ["Bancos", "Interior completo", "Higienização"],
-    /* Substituir por fotografia real: public/images/servicos/automovel.jpg */
+    image: "/images/servicos/servico-automovel.jpg",
   },
   {
     id: "maritimo",
@@ -55,7 +55,7 @@ export const SERVICE_CATEGORIES = [
     description:
       "Barcos, lanchas e iates — estofos e interiores à altura do mar.",
     items: ["Barcos", "Lanchas", "Iates"],
-    /* Substituir por fotografia real: public/images/servicos/maritimo.jpg */
+    image: "/images/servicos/servico-maritimo.jpg",
   },
 ] as const;
 
@@ -129,7 +129,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: "foto",
     image: "/images/galeria/galeria-iate.jpg",
   },
-  { label: "Tapete de lã", location: "Sintra", type: "foto" },
+  {
+    label: "Tapete de lã",
+    location: "Limpeza profunda",
+    type: "foto",
+    image: "/images/galeria/galeria-tapete.jpg",
+  },
   {
     label: "Estofos renovados",
     location: "Resultado final",
@@ -137,5 +142,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     tall: true,
     image: "/images/galeria/galeria-sofa-detalhe.jpg",
   },
-  { label: "Lancha", location: "Troia", type: "vídeo" },
+  {
+    label: "Lancha",
+    location: "Serviço marítimo",
+    type: "foto",
+    image: "/images/galeria/galeria-lancha.jpg",
+  },
 ];

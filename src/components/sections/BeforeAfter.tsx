@@ -24,7 +24,7 @@ const ITEMS: { id: Variant; label: string; note: string }[] = [
   { id: "sofas", label: "Sofás", note: "Higienização profunda · Resultados reais" },
   { id: "carro", label: "Bancos de carro", note: "Higienização profunda · Resultados reais" },
   { id: "maritimo", label: "Estofos marítimos", note: "Imagem ilustrativa do serviço marítimo" },
-  { id: "tapetes", label: "Tapetes", note: "Higienização profunda · Antes e depois" },
+  { id: "tapetes", label: "Tapetes", note: "Imagem ilustrativa do serviço de tapetes" },
 ];
 
 /* Pares de fotografias (antes/depois) por variante.
@@ -42,6 +42,10 @@ const MEDIA: Partial<Record<Variant, { antes: string; depois: string }>> = {
   maritimo: {
     antes: "/images/resultados/maritimo-antes.jpg",
     depois: "/images/resultados/maritimo-depois.jpg",
+  },
+  tapetes: {
+    antes: "/images/resultados/tapetes-antes.jpg",
+    depois: "/images/resultados/tapetes-depois.jpg",
   },
 };
 
