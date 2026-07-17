@@ -41,7 +41,7 @@ Algumas imagens usam fotografias do [Pexels](https://www.pexels.com)
 (licença gratuita para uso comercial, sem atribuição obrigatória):
 
 - Antes/depois **marítimo**: [17859032](https://www.pexels.com/photo/17859032/)
-- Antes/depois **tapetes**: [28379848](https://www.pexels.com/photo/28379848/)
+- Antes/depois **tapetes**: [6634461](https://www.pexels.com/photo/6634461/)
 - Galeria **interior de iate**: [8356428](https://www.pexels.com/photo/8356428/)
 - Galeria **lancha**: [34405154](https://www.pexels.com/photo/34405154/)
 - Card de serviço **residencial** (higienização de sofá em ação): [4401535](https://www.pexels.com/photo/4401535/)
