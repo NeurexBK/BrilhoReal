@@ -25,10 +25,10 @@ adicionados:
 | Local | Ficheiro |
 | --- | --- |
 | Vídeo do hero | `public/videos/hero.mp4` (+ poster opcional `public/images/hero-poster.jpg`) |
-| Cards de serviços | `public/images/servicos/{residencial,automovel,maritimo}.jpg` — substituir `MediaPlaceholder` em `src/components/sections/Services.tsx` |
+| Cards de serviços | `public/images/servicos/servico-{residencial,automovel,maritimo}.jpg` — caminhos em `SERVICE_CATEGORIES` (`src/lib/data.ts`) |
 | Antes/Depois | `public/images/resultados/<id>-antes.jpg` e `<id>-depois.jpg` — ver `src/components/sections/BeforeAfter.tsx` |
-| Galeria | `public/images/galeria/*` — ver `src/components/sections/Gallery.tsx` |
-| Foto da equipa | substituir `MediaPlaceholder` em `src/components/sections/About.tsx` |
+| Galeria | `public/images/galeria/*` — caminhos em `GALLERY_ITEMS` (`src/lib/data.ts`) |
+| Foto "Sobre nós" | `public/images/sobre-acao.jpg` — ver `src/components/sections/About.tsx` |
 
 ## Conteúdo editável
 
@@ -44,13 +44,16 @@ Algumas imagens usam fotografias do [Pexels](https://www.pexels.com)
 - Antes/depois **tapetes**: [28379848](https://www.pexels.com/photo/28379848/)
 - Galeria **interior de iate**: [8356428](https://www.pexels.com/photo/8356428/)
 - Galeria **lancha**: [34405154](https://www.pexels.com/photo/34405154/)
+- Card de serviço **residencial** (higienização de sofá em ação): [4401535](https://www.pexels.com/photo/4401535/)
+- Card de serviço **automóvel** (extração em banco de tecido): [5233285](https://www.pexels.com/photo/5233285/)
 - Card de serviço **marítimo**: [8356420](https://www.pexels.com/photo/8356420/)
 - Poster do hero: [6510311](https://www.pexels.com/photo/6510311/)
 
 Os "antes" marítimo e de tapetes têm envelhecimento aplicado por edição
 (a legenda do comparador assinala "imagem ilustrativa") — substituir por
-fotografias reais de serviços quando existirem. As restantes imagens
-(sofás, automóvel, galeria, sobre nós) são fotografias reais da Brilho Real.
+fotografias reais de serviços quando existirem. Fotografias reais da
+Brilho Real: antes/depois de sofás e carro, galeria de sofá/carro/estofos,
+"Sobre nós".
 
 ## Preparação para o futuro
 
