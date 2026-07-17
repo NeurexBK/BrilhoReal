@@ -7,7 +7,7 @@ export const CONTACT = {
   whatsapp: `https://wa.me/351934415350?text=${encodeURIComponent(
     "Olá! Gostaria de solicitar um orçamento gratuito."
   )}`,
-  email: "geral@brilhoreal.pt",
+  email: "prestigeclean2000@gmail.com",
   instagramHandle: "@brilhoreal.pt",
   instagramUrl: "https://instagram.com/brilhoreal.pt",
 };

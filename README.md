@@ -35,9 +35,6 @@ adicionados:
 Todos os textos, contactos, serviços, estatísticas e avaliações estão
 centralizados em **`src/lib/data.ts`**.
 
-> Nota: o e-mail `geral@brilhoreal.pt` é um placeholder — confirmar o endereço
-> real em `src/lib/data.ts`.
-
 ### Imagens de arquivo
 
 Algumas imagens usam fotografias do [Pexels](https://www.pexels.com)
