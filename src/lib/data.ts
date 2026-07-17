@@ -105,13 +105,32 @@ export type GalleryItem = {
   location: string;
   type: "foto" | "vídeo";
   tall?: boolean;
+  /** Fotografia real em public/images/galeria; sem ela usa placeholder. */
+  image?: string;
 };
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { label: "Sofá chaise-longue", location: "Lisboa", type: "foto", tall: true },
-  { label: "Interior completo", location: "Cascais", type: "vídeo" },
+  {
+    label: "Sofá em tecido",
+    location: "Higienização profunda",
+    type: "foto",
+    tall: true,
+    image: "/images/galeria/galeria-sofa.jpg",
+  },
+  {
+    label: "Interior automóvel",
+    location: "Detalhe completo",
+    type: "foto",
+    image: "/images/galeria/galeria-carro.jpg",
+  },
   { label: "Iate 42 pés", location: "Vilamoura", type: "foto" },
   { label: "Tapete de lã", location: "Sintra", type: "foto" },
-  { label: "Colchão premium", location: "Porto", type: "foto", tall: true },
+  {
+    label: "Estofos renovados",
+    location: "Resultado final",
+    type: "foto",
+    tall: true,
+    image: "/images/galeria/galeria-sofa-detalhe.jpg",
+  },
   { label: "Lancha", location: "Troia", type: "vídeo" },
 ];

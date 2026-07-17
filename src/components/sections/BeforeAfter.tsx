@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -11,10 +12,11 @@ import { fadeUp, stagger, VIEWPORT } from "@/lib/motion";
    Comparador interativo: o utilizador arrasta o divisor para
    revelar o antes (esquerda) e o depois (direita).
 
-   Para usar fotografias reais, adicionar os ficheiros em:
+   Fotografias reais: adicionar o par em
      public/images/resultados/<id>-antes.jpg
      public/images/resultados/<id>-depois.jpg
-   e substituir <Scene /> por <img> nas duas camadas abaixo.  */
+   e registá-lo em MEDIA abaixo. Sem par registado, a variante
+   usa a cena ilustrativa <Scene />.                          */
 
 type Variant = "sofas" | "carro" | "maritimo" | "tapetes";
 
@@ -24,6 +26,18 @@ const ITEMS: { id: Variant; label: string }[] = [
   { id: "maritimo", label: "Estofos marítimos" },
   { id: "tapetes", label: "Tapetes" },
 ];
+
+/* Pares de fotografias reais (antes/depois) por variante. */
+const MEDIA: Partial<Record<Variant, { antes: string; depois: string }>> = {
+  sofas: {
+    antes: "/images/resultados/sofas-antes.jpg",
+    depois: "/images/resultados/sofas-depois.jpg",
+  },
+  carro: {
+    antes: "/images/resultados/carro-antes.jpg",
+    depois: "/images/resultados/carro-depois.jpg",
+  },
+};
 
 /* Cenas ilustrativas (texturas de estofo) enquanto não há fotos. */
 const SCENES: Record<Variant, { base: string; weave: string }> = {
@@ -80,7 +94,7 @@ function Scene({ variant, state }: { variant: Variant; state: "antes" | "depois"
 }
 
 export default function BeforeAfter() {
-  const [active, setActive] = useState<Variant>("sofas");
+  const [active, setActive] = useState<Variant>("carro");
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
@@ -160,14 +174,38 @@ export default function BeforeAfter() {
             }}
           >
             {/* Camada "depois" (fundo) */}
-            <Scene variant={active} state="depois" />
+            {MEDIA[active] ? (
+              <Image
+                src={MEDIA[active].depois}
+                alt={`${ITEMS.find((i) => i.id === active)?.label} — depois da higienização`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-cover"
+                draggable={false}
+                priority
+              />
+            ) : (
+              <Scene variant={active} state="depois" />
+            )}
 
             {/* Camada "antes" (recortada à esquerda do divisor) */}
             <div
               className="absolute inset-0"
               style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
             >
-              <Scene variant={active} state="antes" />
+              {MEDIA[active] ? (
+                <Image
+                  src={MEDIA[active].antes}
+                  alt={`${ITEMS.find((i) => i.id === active)?.label} — antes da higienização`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                  className="object-cover"
+                  draggable={false}
+                  priority
+                />
+              ) : (
+                <Scene variant={active} state="antes" />
+              )}
             </div>
 
             {/* Etiquetas */}

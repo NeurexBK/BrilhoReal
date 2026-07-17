@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -55,16 +56,26 @@ export default function Gallery() {
                 item.tall ? "row-span-2" : ""
               }`}
             >
-              <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
-                <MediaPlaceholder
-                  icon={
-                    item.type === "vídeo" ? (
-                      <IconDroplet className="h-full w-full" />
-                    ) : (
-                      <IconSparkles className="h-full w-full" />
-                    )
-                  }
-                />
+              <div className="relative h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={`${item.label} — ${item.location}`}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <MediaPlaceholder
+                    icon={
+                      item.type === "vídeo" ? (
+                        <IconDroplet className="h-full w-full" />
+                      ) : (
+                        <IconSparkles className="h-full w-full" />
+                      )
+                    }
+                  />
+                )}
               </div>
 
               {/* Overlay premium no hover */}
